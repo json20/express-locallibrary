@@ -1,7 +1,7 @@
-# Express Local Library
+# Express Local Library Web Application
 Express tutorial from the MDN tutorials
 
-#Description
+# Description
 This is a website that maintain an online library catalog where users can browse books and manage their account
 Website uses express and a mongoose database.
 
