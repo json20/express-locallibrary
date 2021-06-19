@@ -1,12 +1,17 @@
-var mongoose = require('mongoose');
+let mongoose = require('mongoose');
 
-var Schema = mongoose.Schema;
+let Schema = mongoose.Schema;
 
-var BookInstanceSchema = new Schema(
+let BookInstanceSchema = new Schema(
     {
-        book: { type: Schema.Types.ObjectId, ref: 'Book', required: true }, //reference to the associated book
+        book: {type: Schema.Types.ObjectId, ref: 'Book', required: true}, //reference to the associated book
         imprint: {type: String, required: true},
-        status: {type: String, required: true, enum: ['Available', 'Maintenance', 'Loaned', 'Reserved'], default: 'Maintenance'},
+        status: {
+            type: String,
+            required: true,
+            enum: ['Available', 'Maintenance', 'Loaned', 'Reserved'],
+            default: 'Maintenance'
+        },
         due_back: {type: Date, default: Date.now}
     }
 );
